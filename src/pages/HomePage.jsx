@@ -46,7 +46,7 @@ const HomePage = () => {
     return (
         <>
             <Navbar />
-            <main>
+            <main className="pt-20">
                 <div className="flex flex-wrap m-2 gap-6 justify-center items-center p-6 bg-gray-100">
 
                     <div className="w-30 h-30 bg-white flex flex-col justify-center items-center rounded-md cursor-pointer"

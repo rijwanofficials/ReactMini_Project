@@ -17,8 +17,9 @@ const Navbar = () => {
     const handleClick = () => navigate(`/search?text=${searchText}`);
 
     return (
-        <nav className="flex flex-col sm:flex-row gap-4 sm:gap-0 px-4 py-3 sm:py-4 justify-between items-center bg-blue-800 w-full">
+        <nav className="fixed top-0 left-0 z-50 flex flex-col sm:flex-row gap-4 sm:gap-0 px-4 py-3 sm:py-4 justify-between items-center bg-blue-800 w-full">
             <Link to="/" className="text-white text-xl font-bold">Snap Cart</Link>
+            
             <div className="relative flex items-center w-full sm:w-auto max-w-full sm:max-w-md">
                 <IoMdSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg" />
                 <input
@@ -37,7 +38,6 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Login button */}
             <button
                 onClick={handleLogin}
                 className="flex items-center gap-2 mt-2 sm:mt-0 px-4 py-2 text-white bg-cyan-300 rounded-md hover:bg-red-500 transition-colors cursor-pointer"
