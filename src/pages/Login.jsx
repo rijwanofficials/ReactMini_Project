@@ -12,19 +12,12 @@ const Login = () => {
     const handleBackToHome = () => {
         navigate('/');
     }
-
     const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handlenameChange = (e) => {
         setName(e.target.value);
     }
-
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-    }
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsSubmitted(true);
@@ -32,7 +25,7 @@ const Login = () => {
 
     useEffect(() => {
         if (isSubmitted) {
-            navigate(`/welcome?name=${name}&email=${email}`);
+            navigate(`/welcome?name=${name}`);
         }
     }, [isSubmitted, navigate]);
 
@@ -64,16 +57,7 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <div>
-                            <label className="block text-gray-700 font-medium mb-1">Email</label>
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-                                onChange={handleEmailChange}
-                                required
-                            />
-                        </div>
+                        
                         <div>
                             <label className="block text-gray-700 font-medium mb-1">Password</label>
                             <input
@@ -87,7 +71,7 @@ const Login = () => {
                             type="submit"
                             className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
                         >
-                            Submit
+                            LogIn
                         </button>
                     </form>
 
