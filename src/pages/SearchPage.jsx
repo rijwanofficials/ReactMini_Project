@@ -35,7 +35,7 @@ const SearchPage = () => {
                 setLoading(false);
                 return;
             }
-            await new Promise((resolve) => setTimeout(resolve, 2000));
+            await new Promise((resolve) => setTimeout(resolve, 1000));
             setProducts(data.products);
             setTotalItems(data.total);
         }
@@ -63,7 +63,7 @@ const SearchPage = () => {
                     </div>
                 </>
             )}
-            <main className="grid grid-cols-[300px_1fr] gap-6 p-6">
+            <main className="grid grid-cols-[300px_1fr] gap-6 p-6 pt-16">
                 {loading && !notFound &&
                     (
                         <>
