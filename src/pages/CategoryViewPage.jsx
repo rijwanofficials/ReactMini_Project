@@ -67,7 +67,7 @@ const CategoryViewPage = () => {
     return (
         <>
             <Navbar />
-            <main className="grid grid-cols-[300px_1fr] gap-6 p-6">
+            <main className="grid grid-cols-[300px_1fr] gap-6 p-6 pt-16">
                 {loading &&
                     (
                         <>
